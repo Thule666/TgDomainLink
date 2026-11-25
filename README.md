@@ -7,7 +7,7 @@ A static GitHub Pages site that shows an animated pop-up inviting visitors to jo
 | What | Where |
 |------|-------|
 | Telegram channel | `channel` in `script.js`: the name after `t.me/` (also update the `href` in `index.html` for visitors without JavaScript) |
-| Background picture | Save it as `assets/popup-bg.jpg`, or change `--popup-image` in `style.css` |
+| Pictures | Full-screen background: `assets/page-bg.jpg`. Pop-up background: `assets/popup-bg.jpg`. Paths are set by `--page-image` and `--popup-image` in `style.css` |
 | Title and text | `index.html` |
 | Pop-up delay and auto-redirect | `CONFIG` in `script.js` |
 
