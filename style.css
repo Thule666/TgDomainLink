@@ -105,10 +105,10 @@ body {
   position: absolute;
   inset: 0;
   background:
-    var(--popup-image) center 15% / cover no-repeat,
+    var(--popup-image) 40% 20% / cover no-repeat,
     linear-gradient(135deg, #2aabee 0%, #5b6cff 55%, #9b4dff 100%);
   transform: scale(1.05);
-  transform-origin: 50% 25%;
+  transform-origin: 40% 30%;
   animation: ken-burns 18s ease-in-out infinite alternate;
 }
 @keyframes ken-burns {
