@@ -1,7 +1,7 @@
 // ===== Settings =====
 const CONFIG = {
-  // Your Telegram channel link
-  telegramUrl: "https://t.me/your_channel",
+  // Your Telegram channel name (the part after t.me/), e.g. "durov"
+  channel: "your_channel",
   // Delay before the pop-up appears (ms)
   showDelay: 600,
   // Redirect straight to Telegram after this many ms (0 = off)
@@ -15,7 +15,8 @@ const CONFIG = {
   const closeBtn = document.getElementById("close");
   const laterBtn = document.getElementById("later");
 
-  cta.href = CONFIG.telegramUrl;
+  const telegramUrl = "https://t.me/" + CONFIG.channel.replace(/^@/, "");
+  cta.href = telegramUrl;
 
   function open() {
     reopen.hidden = true;
@@ -49,6 +50,6 @@ const CONFIG = {
   setTimeout(open, CONFIG.showDelay);
 
   if (CONFIG.autoRedirect > 0) {
-    setTimeout(() => { window.location.href = CONFIG.telegramUrl; }, CONFIG.autoRedirect);
+    setTimeout(() => { window.location.href = telegramUrl; }, CONFIG.autoRedirect);
   }
 })();
