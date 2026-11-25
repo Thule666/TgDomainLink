@@ -72,7 +72,7 @@ body {
 .popup {
   position: relative;
   width: min(440px, 100%);
-  min-height: 460px;
+  min-height: 560px;
   border-radius: 28px;
   overflow: hidden;
   display: flex;
@@ -82,6 +82,7 @@ body {
     0 0 0 1px rgba(255, 255, 255, 0.12) inset;
   animation: pop-in 0.6s cubic-bezier(0.2, 0.9, 0.25, 1.25) both;
 }
+.popup:focus { outline: none; }
 .overlay.closing .popup { animation: pop-out 0.3s ease both; }
 
 @keyframes pop-in {
@@ -135,9 +136,9 @@ body {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(5, 8, 15, 0.1) 0%,
-    rgba(5, 8, 15, 0.35) 30%,
-    rgba(5, 8, 15, 0.8) 55%,
+    rgba(5, 8, 15, 0) 0%,
+    rgba(5, 8, 15, 0.15) 35%,
+    rgba(5, 8, 15, 0.8) 62%,
     rgba(5, 8, 15, 0.95) 100%
   );
 }
@@ -210,8 +211,9 @@ p {
   box-shadow: 0 16px 36px rgba(42, 171, 238, 0.6);
 }
 .cta:active { transform: translateY(0); }
-.cta svg { transition: transform 0.2s ease; }
-.cta:hover svg { transform: translateX(4px); }
+.cta svg { transition: transform 0.2s ease; flex: none; }
+.cta:hover svg:last-child { transform: translateX(4px); }
+.cta .tg-glyph { transform: translateX(-1px); }
 
 /* Shine sweep */
 .cta::after {

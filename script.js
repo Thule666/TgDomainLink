@@ -22,7 +22,7 @@ const CONFIG = {
     reopen.hidden = true;
     overlay.classList.remove("closing");
     overlay.hidden = false;
-    cta.focus({ preventScroll: true });
+    overlay.querySelector(".popup").focus({ preventScroll: true });
   }
 
   function close() {
