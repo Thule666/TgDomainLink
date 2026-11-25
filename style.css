@@ -50,15 +50,17 @@ body {
 .overlay[hidden] { display: none; }
 .overlay.closing { animation: fade-out 0.3s ease both; }
 
-/* Desktop: the wide artwork is bright and busy, so calm it down behind the pop-up:
-   darker spotlight in the centre, vignette at the edges, slight blur, toned-down whites */
+/* "Faded ink": the artwork is bright and busy, so show it as a faint texture on near-black */
+body { background: #07080b; }
+.backdrop {
+  opacity: 0.22;
+  filter: grayscale(1) contrast(1.1);
+}
+
+/* Desktop: vignette at the edges instead of a flat dim */
 @media (min-width: 700px) {
   .overlay {
-    background:
-      radial-gradient(ellipse 45% 60% at 50% 50%, rgba(5, 6, 10, 0.75) 0%, rgba(5, 6, 10, 0.45) 100%),
-      radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.7) 100%);
-    backdrop-filter: blur(2.5px) brightness(0.8) contrast(1.05);
-    -webkit-backdrop-filter: blur(2.5px) brightness(0.8) contrast(1.05);
+    background: radial-gradient(ellipse at center, transparent 35%, rgba(0, 0, 0, 0.75) 100%);
   }
 }
 
