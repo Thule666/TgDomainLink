@@ -1,7 +1,7 @@
 // ===== Settings =====
 const CONFIG = {
   // Your Telegram channel name (the part after t.me/), e.g. "durov"
-  channel: "your_channel",
+  channel: "wildejager",
   // Delay before the pop-up appears (ms)
   showDelay: 600,
   // Redirect straight to Telegram after this many ms (0 = off)
